@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import { Routes, Route, useLocation } from "react-router-dom"; // ⬅️ add useLocation
 import Tours from "./Routes/Tours";
 import Guide from "./Routes/Guide";
-import Community from "./Routes/community";
+import Community from "./Routes/Community";
 import Home from "./Routes/Home";
 import TripPlan from "./viewTrip/Tripplan";
 import Signup from "./Routes/signup";
