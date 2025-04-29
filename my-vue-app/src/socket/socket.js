@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 
 // Define your backend URL (live + localhost support)
-const backendUrl = "https://travelxguide1.onrender.com" || "https://travelxguide1-1.onrender.com";
+const backendUrl = "https://travelxguide1.onrender.com";
 
 export const socket = io(backendUrl, {
   autoConnect: false,
