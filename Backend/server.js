@@ -18,7 +18,8 @@ connectDB();
 
 // Allow frontend connection
 const allowedOrigins = ["http://localhost:5173",
-                        "https://travelxguide1-frontend1.onrender.com" ];
+                        "https://travelxguide1-frontend1.onrender.com",
+                        "https://travelxguide1.onrender.com"];
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({ origin: allowedOrigins, credentials: true }));
