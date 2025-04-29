@@ -17,7 +17,7 @@ const port = process.env.PORT || 4000;
 connectDB();
 
 // Allow frontend connection
-const allowedOrigins = ["http://localhost:5173"
+const allowedOrigins = ["http://localhost:5173",
                         "https://travelxguide1-frontend1.onrender.com" ];
 app.use(express.json());
 app.use(cookieParser());
