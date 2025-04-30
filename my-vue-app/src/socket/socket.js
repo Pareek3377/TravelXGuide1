@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const backendUrl = "https://travelxguide1.onrender.com";
+const backendUrl = "https://travelxguide1-1.onrender.com";
 
 export const socket = io(backendUrl, {
   autoConnect: false,
