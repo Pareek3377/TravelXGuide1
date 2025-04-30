@@ -1,12 +1,11 @@
 import { io } from "socket.io-client";
 
-// Define your backend URL (live + localhost support)
 const backendUrl = "https://travelxguide1.onrender.com";
 
 export const socket = io(backendUrl, {
   autoConnect: false,
-  withCredentials: true, // ✅ Include cookies/credentials
-  transports: ["websocket", "polling"], // ✅ Allow fallback (better for Render hosting)
+  withCredentials: true,
+  transports: ["polling"], // 🚀 Only use polling (no WebSocket)
 });
 
 console.log("🔌 Socket initialized with backend URL:", backendUrl);
