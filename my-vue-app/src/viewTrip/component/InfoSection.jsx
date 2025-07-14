@@ -9,11 +9,7 @@ function InfoSection({ trip }) {
   return (
     <div className=" mt-25 max-w-3xl mx-auto p-5 bg-gray-100 rounded-lg shadow-lg">
       {/* Image Section */}
-      <img
-        className="h-[160px] sm:h-[220px] md:h-[260px] w-full object-cover rounded-lg"
-        src="/tajmahal.jpg"
-        alt="Trip Destination"
-      />
+
 
       {/* Trip Information Section */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-5">

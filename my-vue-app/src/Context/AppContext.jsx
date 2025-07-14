@@ -144,20 +144,26 @@ export const AppContextProvider = (props) => {
     console.log("Login function called!");
 
     try {
-      const { data } = await axios.post(`${backendUrl}/api/auth/login`, { email, password });
-  
+      const response = await axios.post(`${backendUrl}/api/auth/login`, {
+        email,
+        password,
+      });
+    
+      const { data } = response;
+    
       if (data.success && data.user) {
         localStorage.setItem("token", data.token);
-        localStorage.setItem("user", JSON.stringify(data.user)); // ✅ Ensure this includes 'id'
+        localStorage.setItem("user", JSON.stringify(data.user));
         setIsLoggedin(true);
         setUserData(data.user);
-        toast.success("Login successful!");
+        toast.success("Login successful!"); // ✅ Green
         navigate("/");
       } else {
-        toast.error(data.message);
+        toast.error(data.message || "Login failed."); // ❌ Red
       }
     } catch (error) {
-      toast.error(error.response?.data?.message || "Login failed");
+      console.error("Login error:", error); // Optional: debug
+      toast.error(error.response?.data?.message || "Login failed."); // ❌ Red
     }
   };
   
