@@ -8,7 +8,7 @@ export const AppContext = createContext();
 
 export const AppContextProvider = (props) => {
   axios.defaults.withCredentials = true;
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  const backendUrl = "https://travelxguide1-1.onrender.com";
 
   console.log("AppContext initialized, backend URL:", backendUrl);
 

@@ -8,7 +8,6 @@ function InfoSection({ trip }) {
 
   return (
     <div className=" mt-25 max-w-3xl mx-auto p-5 bg-gray-100 rounded-lg shadow-lg">
-      {/* Image Section */}
 
 
       {/* Trip Information Section */}
@@ -36,9 +35,9 @@ function InfoSection({ trip }) {
           <FaShare />
         </button>
       </div>
-    </div>
-  );
-}
+      </div>
+    );
+  }
 
 export default InfoSection;
 

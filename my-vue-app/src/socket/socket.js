@@ -1,11 +1,11 @@
 import { io } from "socket.io-client";
 
-const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+const backendUrl = "https://travelxguide1-1.onrender.com";
 
 export const socket = io(backendUrl, {
   autoConnect: false,
-  withCredentials: true, // ✅ Ensure credentials are included
-  transports: ["websocket"], // ✅ Use WebSocket for stability
+  withCredentials: true,
+  transports: ["polling"], // 🚀 Only use polling (no WebSocket)
 });
 
-console.log("🔌 Socket initialized:", backendUrl);
+console.log("🔌 Socket initialized with backend URL:", backendUrl);
